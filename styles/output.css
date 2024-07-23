@@ -7,7 +7,7 @@ body {
 #navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center; }
   #navbar a {
     text-decoration: underline;
@@ -46,32 +46,28 @@ body {
 
 #projects {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: 0;
   align-items: 0;
   margin: 4% 0;
   gap: 10px; }
+  #projects a {
+    text-decoration: underline;
+    color: black; }
+  #projects a:hover {
+    color: #adff02; }
   #projects h2 {
     font-family: "Stardom", serif; }
-  #projects #food {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: 0;
-    align-items: 0;
-    gap: 10px; }
-    #projects #food img {
-      width: 100%;
-      max-width: 30vw;
-      margin-inline: auto; }
+  #projects #food,
   #projects #movie {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
     justify-content: 0;
     align-items: 0;
-    gap: 10px; }
+    gap: 4%; }
+    #projects #food img,
     #projects #movie img {
       width: 100%;
-      max-width: 30vw;
-      margin-inline: auto; }
+      border-radius: 12px; }
 
 /*# sourceMappingURL=output.css.map */

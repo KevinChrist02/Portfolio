@@ -25,7 +25,7 @@ body {
 }
 
 #navbar {
-  @include display(row, space-around);
+  @include display(row, space-between);
   a {
     @include link;
     text-decoration: none;
@@ -64,28 +64,25 @@ body {
 }
 
 #projects {
-  @include display(row, 0, 0);
+  @include display(column, 0, 0);
   margin: 4% 0;
   gap: 10px;
+  a {
+    @include link;
+  }
+  a:hover {
+    @include hover;
+  }
   h2 {
     font-family: $title-font;
   }
-  #food {
-    @include display(column-reverse, 0, 0);
-    gap: 10px;
-    img {
-      width: 100%;
-      max-width: 30vw;
-      margin-inline: auto;
-    }
-  }
+  #food,
   #movie {
-    @include display(column-reverse, 0, 0);
-    gap: 10px;
+    @include display(row-reverse, 0, 0);
+    gap: 4%;
     img {
       width: 100%;
-      max-width: 30vw;
-      margin-inline: auto;
+      border-radius: 12px;
     }
   }
 }
