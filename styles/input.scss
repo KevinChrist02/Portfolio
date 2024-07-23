@@ -1,0 +1,91 @@
+@mixin display($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin hover() {
+  color: $hover-color;
+}
+@mixin link() {
+  text-decoration: underline;
+  color: $text-color;
+}
+
+$main-font: "Ranade", sans-serif;
+$title-font: "Stardom", serif;
+$text-color: black;
+$hover-color: #adff02;
+
+body {
+  margin: 0 10%;
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#navbar {
+  @include display(row, space-around);
+  a {
+    @include link;
+    text-decoration: none;
+    margin: 4% 0;
+    font-size: 1.5rem;
+  }
+  a:hover {
+    @include hover;
+  }
+}
+
+#welcome-section {
+  @include display;
+  h1 {
+    font-family: $title-font;
+    font-size: 4rem;
+    font-weight: 600;
+  }
+}
+
+#about-me {
+  @include display(column, flex-start, 0);
+  margin: 4% 0;
+  h2 {
+    font-family: $title-font;
+  }
+  p {
+    max-width: 800px;
+  }
+  a {
+    @include link;
+  }
+  a:hover {
+    @include hover;
+  }
+}
+
+#projects {
+  @include display(row, 0, 0);
+  margin: 4% 0;
+  gap: 10px;
+  h2 {
+    font-family: $title-font;
+  }
+  #food {
+    @include display(column-reverse, 0, 0);
+    gap: 10px;
+    img {
+      width: 100%;
+      max-width: 30vw;
+      margin-inline: auto;
+    }
+  }
+  #movie {
+    @include display(column-reverse, 0, 0);
+    gap: 10px;
+    img {
+      width: 100%;
+      max-width: 30vw;
+      margin-inline: auto;
+    }
+  }
+}
