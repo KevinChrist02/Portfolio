@@ -86,3 +86,26 @@ body {
     }
   }
 }
+#contact {
+  h2 {
+    font-family: $title-font;
+  }
+  a {
+    @include link;
+  }
+  a:hover {
+    @include hover;
+  }
+}
+
+@media (max-width: 600px) {
+  #navbar {
+    @include display(column);
+  }
+  #projects {
+    #food,
+    #movie {
+      @include display(column, 0, 0);
+    }
+  }
+}

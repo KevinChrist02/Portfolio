@@ -70,4 +70,26 @@ body {
       width: 100%;
       border-radius: 12px; }
 
+#contact h2 {
+  font-family: "Stardom", serif; }
+#contact a {
+  text-decoration: underline;
+  color: black; }
+#contact a:hover {
+  color: #adff02; }
+
+@media (max-width: 600px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+  #projects #food,
+  #projects #movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: 0;
+    align-items: 0; } }
+
 /*# sourceMappingURL=output.css.map */
